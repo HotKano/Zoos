@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/start"
+    tools:context=".AlarmPreload_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backButton_repeat_act"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="13dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            android:text="10분 전 알림 설정"
+            android:textColor="#262626"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0.04"
+            android:lineSpacingExtra="7sp"
+            android:text="미리 알림을 제공받을 시간을 선택하세요."
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 3분 전 -->
+            <LinearLayout
+                android:id="@+id/min_three"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/m3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="3"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="분 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 5분 전 -->
+            <LinearLayout
+                android:id="@+id/min_five"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="5"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="분 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 10분 전 -->
+            <LinearLayout
+                android:id="@+id/min_ten"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="10"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="분 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 15분 전 -->
+            <LinearLayout
+                android:id="@+id/min_tenFive"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="15"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="분 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 30분 전 -->
+            <LinearLayout
+                android:id="@+id/min_halfHour"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="30"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="분 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 1시간 전 -->
+            <LinearLayout
+                android:id="@+id/hour_one"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="1"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="시간 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 2시간 전 -->
+            <LinearLayout
+                android:id="@+id/hour_two"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="2"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="시간 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 3시간 전 -->
+            <LinearLayout
+                android:id="@+id/hour_three"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="3"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="시간 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- 12시간 전 -->
+            <LinearLayout
+                android:id="@+id/hour_halfDay"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="12"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="시간 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 1일 전 -->
+            <LinearLayout
+                android:id="@+id/date_one"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="1"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="일 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 2일 전 -->
+            <LinearLayout
+                android:id="@+id/date_two"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="2"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="일 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- 3일 전 -->
+            <LinearLayout
+                android:id="@+id/date_week"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/round_gray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="3sp"
+                    android:text="1"
+                    android:textColor="#262626"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:letterSpacing="0.04"
+                    android:lineSpacingExtra="10sp"
+                    android:text="주 전"
+                    android:textColor="#262626"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/repeat_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_join"
+        android:textStyle="bold"
+        android:text="저장"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

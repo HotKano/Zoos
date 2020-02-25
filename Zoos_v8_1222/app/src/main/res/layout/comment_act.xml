@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/zone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLogo"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backbutton_comment"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+             />
+
+        <ImageView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:src="@drawable/logo" />
+
+    </RelativeLayout>
+
+<!--    <LinearLayout
+        android:id="@+id/zone2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/zone1"
+        android:background="#3ba990"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/titleText2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/cafemenulogo" />
+
+    </LinearLayout>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reviewList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/writezone"
+        android:layout_below="@+id/zone1"
+        android:divider="#00000000"
+        android:paddingTop="10dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/emptytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="아직 등록된 리뷰가 없습니다!"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/writezone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#d2d4c9"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/writeBtn_reply"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:text="리뷰 남기기" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    tools:context="com.chanb.zoos.Calendar_input_act">
+
+    <!-- 백 버튼 && 등록 버튼 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backButton_calendar_input"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/back" />
+
+        <Button
+            android:id="@+id/calendar_input_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:letterSpacing="0.02"
+            android:text="등록"
+            android:textColor="@color/start_with_phone_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 일정 등록 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="20dp"
+        android:letterSpacing="0.02"
+        android:text="일정 등록"
+        android:textColor="#262626"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- 동물 선택 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="22dp"
+        android:letterSpacing="0.04"
+        android:text="동물 선택"
+        android:textColor="#262626"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- 동물 사진 이름 노출 가로 스크롤-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/calendar_input_act_recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="39dp" />
+
+    <!-- 할 일 선택 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="20dp"
+        android:letterSpacing="0.04"
+        android:text="일정 입력"
+        android:textColor="#262626"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- 검색 -->
+    <EditText
+        android:id="@+id/calendar_input_editText"
+        style="@style/Theme.Edit.upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:hint="일정을 입력하세요."
+        android:textColor="#262626"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#f1f1f2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:letterSpacing="0.02"
+                android:text="최근검색어"
+                android:textColor="#262626"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- 최근 검색어 연동 SQLITE 이용 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_search_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/calendar_info_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_join"
+        android:text="알림시간 설정"
+        android:textColor="@color/start"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

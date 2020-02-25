@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorLogo</item>
+        <item name="colorPrimaryDark">@color/start</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your status here. -->
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.Fullscreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:actionMenuTextColor">@color/color_option_menu</item>
+    </style>
+
+    <!-- 타임 피커 관련 -->
+    <style name="appCompatStyle" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- 경계선 -->
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorControlActivated">@android:color/black</item>
+        <item name="android:editTextStyle">@style/editTextStyle</item>
+    </style>
+
+
+    <!-- 날짜 스피너 관련 -->
+    <!-- changes the default text colour for the EditTexts -->
+    <style name="editTextStyle" parent="android:style/Widget.EditText">
+        <item name="android:textColor">#262626</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:colorBackground">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Base application theme. -->
+    <style name="Theme.Edit.upload" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">#00000000</item>
+        <item name="colorControlActivated">#00000000</item>
+        <item name="colorControlHighlight">@color/colorJoinText</item>
+        <item name="android:textColor">@color/colorJoinText</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Edit.base_login" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/editText_Normal_Mode</item>
+        <item name="colorControlActivated">@color/editText_Normal_Mode</item>
+        <item name="colorControlHighlight">@color/colorJoinText</item>
+        <item name="android:textColor">@color/colorJoinText</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Edit.base" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorControlNormal">@color/editText_Normal_Mode</item>
+        <item name="colorControlActivated">@color/editText_Normal_Mode</item>
+        <item name="colorControlHighlight">@color/colorJoinText</item>
+        <item name="android:textColor">@color/colorJoinText</item>
+        <item name="android:textCursorDrawable">@drawable/black_cursor</item>
+
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">2dip</item>
+    </style>
+
+    <style name="Button.Menu" parent="Button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:onClick">onButtonClick</item>
+    </style>
+
+    <style name="Button.Settings" parent="Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:onClick">onClearClick</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:paddingLeft">8sp</item>
+        <item name="android:paddingTop">0sp</item>
+        <item name="android:paddingBottom">0sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>

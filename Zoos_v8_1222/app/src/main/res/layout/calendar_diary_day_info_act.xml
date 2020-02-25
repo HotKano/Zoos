@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    tools:context=".CalendarDiaryDayInfo_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 백 버튼 && 등록 버튼 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp">
+
+            <ImageButton
+                android:id="@+id/backButton_calendar_dayInfo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:id="@+id/calendar_diary_input"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/todo_2" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/date_day_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="13dp"
+            android:letterSpacing="0.02"
+            android:text="2018.11.24 (금)"
+            android:textColor="#262626"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/upload_button_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_day_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanum_square_bold"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <!-- 상단 일정 표시 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_diary_day_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emptyText_today_info"
+                android:layout_width="wrap_content"
+                android:layout_height="182dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:textColor="#393939"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="일정이 없습니다. \n 필수체크케어리스트 또는 추천케어를 참고하여 반려동물에게 케어를 선물해주세요" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:letterSpacing="0.02"
+            android:text="추천일정"
+            android:textColor="#262626"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- 추천 리스트 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_diary_day_care"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp" />
+
+        <!-- 하단 케어소식 -->
+        <RelativeLayout
+            android:id="@+id/more_care_layout_day"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/main_care_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/face" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/main_care_image"
+                android:layout_toRightOf="@+id/main_care_image"
+                android:letterSpacing="0.04"
+                android:text="더 많은 케어소식 받기"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_1" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/more_care_swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_dark">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/more_care_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <!-- 백 버튼 && 태그 설정 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- 백 버튼 -->
+                <ImageButton
+                    android:id="@+id/more_care_backButton"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/back" />
+
+                <!-- 태그 설정 버튼 -->
+                <Button
+                    android:id="@+id/more_care_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:letterSpacing="0.02"
+                    android:text="태그 설정"
+                    android:textColor="#3583fb"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <!-- 추천 -->
+            <TextView
+                android:id="@+id/moreCare_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:letterSpacing="0.02"
+                android:text="추천"
+                android:textColor="#262626"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <!-- 추천 리스트 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/more_care_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,217 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    tools:context="com.chanb.zoos.Calendar_frag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/start"
+        android:orientation="vertical">
+
+        <!-- 상단 메뉴 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/diary_frag_today"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/diary_frag_btn"
+                android:background="@android:color/transparent"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="3sp"
+                android:scaleType="fitXY"
+                android:src="@drawable/calendar_2"
+                android:textColor="#262626"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/diary_frag_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/todo_2" />
+
+        </RelativeLayout>
+
+        <!-- 월 표시 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="29dp"
+            android:background="#ffffffff">
+
+
+            <TextView
+                android:id="@+id/monthPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.02"
+                android:text="test"
+                android:textColor="#55262626"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/monthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.02"
+                android:text="MonthView"
+                android:textColor="#262626"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/monthNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center_vertical"
+                android:letterSpacing="0.02"
+                android:text="test"
+                android:textColor="#55262626"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+        <!-- 요일 표시 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:background="@color/start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="#ff0000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="W"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="#262626"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="#0000ff"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- 요일과 달력 경계선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/calendar_view_color" />
+
+        <!-- 달력 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/monthView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- 일정 만 보기 플로팅 버튼 -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/test_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:paddingBottom="30dp"
+        android:src="@drawable/vertical"
+        app:backgroundTint="@color/start_with_phone_color"
+        app:borderWidth="0dp"
+        app:elevation="0dp" />
+
+</android.support.design.widget.CoordinatorLayout>

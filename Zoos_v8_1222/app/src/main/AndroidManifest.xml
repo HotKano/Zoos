@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.chanb.zoos">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/onlylogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/onlylogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- 크롭 이미지 -->
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <!-- 알람 리시버 -->
+        <receiver android:name=".AlarmReceiver" />
+
+        <activity
+            android:name=".Alarm_Repeat_Act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".AlarmSettingAct"
+            android:screenOrientation="fullSensor" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_key" />
+
+        <!-- 사진 촬영 및 앨범 접근을 위한 파일제공자 명시 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.chanb.zoos.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_path" />
+        </provider>
+
+        <activity
+            android:name=".Logo_act"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Care_Content_Act"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Main_act"
+            android:screenOrientation="fullSensor" />
+
+        <!-- 카카오 공유 분기를 위한 액트-->
+        <activity
+            android:name=".Test_act"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Album_act"
+            android:screenOrientation="fullSensor">
+
+        </activity>
+        <activity
+            android:name=".Delete_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Upload_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Login_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Comment_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Edit_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Comment_input_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Save_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Story_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Setting_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Pet_edit_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Pet_show_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Calendar_upload_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Content_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".More_care_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Calendar_input_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Calendar_select_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Calendar_info_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Loading_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".AlarmPreload_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".CalendarDiaryInfo_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".TagSetting_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".CalendarDiaryDayInfo_act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".MessageShow_Act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Join_Act"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Join_Act2"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".Calendar_Diary_Today_Info_Act"
+            android:screenOrientation="fullSensor" />
+
+        <!-- fireBase -->
+        <service
+            android:name=".FireBaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FireBaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

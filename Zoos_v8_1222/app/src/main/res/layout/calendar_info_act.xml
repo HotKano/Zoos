@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.chanb.zoos.Calendar_info_act">
+
+    <!-- 백 버튼 && 등록 버튼 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backButton_calendar_info"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <Button
+            android:id="@+id/calendar_info_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:letterSpacing="0.02"
+            android:text="등록"
+            android:textColor="@color/start_with_phone_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 일정 등록 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:letterSpacing="0.02"
+        android:text="일정 등록"
+        android:textColor="#262626"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp">
+
+        <!-- profile -->
+        <ImageView
+            android:id="@+id/petProfile_info"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="6dp"
+            android:scaleType="fitXY" />
+
+        <!-- 펫 이름 및 일정 -->
+        <TextView
+            android:id="@+id/petName_Todo_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:letterSpacing="0.02"
+            android:text="시바 - 간식"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/calendar_view_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+
+
+            <!-- 시작 일시 종료 일시 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:text="&gt; 종료일시"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <!-- 시작 일시 종료 일시 실질적인 set view -->
+        <LinearLayout
+            android:id="@+id/test_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 시작 일시 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!-- 시작 일시 종료 일시 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:letterSpacing="0.04"
+                    android:text="일시"
+                    android:textColor="#262626"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- 시작 날짜 -->
+                <TextView
+                    android:id="@+id/startDate_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:letterSpacing="0.04"
+                    android:text="18.10.26(금)"
+                    android:textColor="#262626"
+                    android:textSize="15sp" />
+
+                <!-- 시작 시간 -->
+                <TextView
+                    android:id="@+id/startTime_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.04"
+                    android:text="16:30"
+                    android:textColor="#262626"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="설정하기"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_2"
+                android:visibility="gone" />
+
+            <!-- 종료 일시 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/waiting_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:letterSpacing="0.04"
+                    android:text="선택중"
+                    android:textColor="#3583fb"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <!-- 종료 날짜 -->
+                <TextView
+                    android:id="@+id/endDate_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.04"
+                    android:text="18.10.26(금)"
+                    android:textColor="#262626"
+                    android:textSize="15sp"
+                    android:visibility="invisible" />
+
+                <!-- 종료 시간 -->
+                <TextView
+                    android:id="@+id/endTime_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanum_square_extrabold"
+                    android:letterSpacing="0.04"
+                    android:text="16:30"
+                    android:textColor="#262626"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/calendar_view_color" />
+
+
+    <!-- 10분 전 알림 -->
+    <RelativeLayout
+        android:id="@+id/preAlarm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:letterSpacing="0.04"
+            android:text="10분 전 알림"
+            android:textColor="#262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/preload_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:letterSpacing="0.04"
+            android:text="설정하기"
+            android:textColor="#3583fb"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- 경계선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/calendar_view_color" />
+
+
+    <!-- 메모 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:letterSpacing="0.04"
+            android:text="메모"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+        <!-- 검색 -->
+        <EditText
+            android:id="@+id/calendar_memo_info"
+            style="@style/Theme.Edit.upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="# 간단한 메모를 저장할 수 있습니다." />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

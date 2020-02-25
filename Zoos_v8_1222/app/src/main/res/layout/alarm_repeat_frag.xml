@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Alarm_repeat_frag">
+
+    <!-- 매 주 -->
+    <LinearLayout
+        android:id="@+id/repeat_on_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/repeat_frag_monday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="월"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_tuesday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="화"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_wednesday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="수"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_thursday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="목"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_friday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="금"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_saturday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="토"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/repeat_frag_sunday"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_gray"
+            android:fontFamily="@font/nanum_square_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="6sp"
+            android:text="일"
+            android:textColor="#262626"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <!-- 월, 년 -->
+    <LinearLayout
+        android:id="@+id/month_year_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/month_year_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/nanum_square_regular"
+                android:letterSpacing="0.04"
+                android:text="30일"
+                android:textColor="#55262626"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/check_3"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/edit_view_color" />
+
+        <RelativeLayout
+            android:id="@+id/month_year_lastFri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/nanum_square_regular"
+                android:letterSpacing="0.04"
+                android:text="마지막 금요일"
+                android:textColor="#55262626"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/check_3"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/edit_view_color" />
+
+        <RelativeLayout
+            android:id="@+id/month_year_lastDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/nanum_square_regular"
+                android:letterSpacing="0.04"
+                android:text="마지막 날"
+                android:textColor="#55262626"
+                android:textSize="15sp" />
+
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="11dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/check_3"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

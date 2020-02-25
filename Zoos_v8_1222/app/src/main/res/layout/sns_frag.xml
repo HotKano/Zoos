@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_sns"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainActTabColor"
+    android:padding="10dp"
+    tools:context=".Main_act">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sns_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- // 상단 툴 바 -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentInsetStart="0dp">
+
+                <TextView
+                    android:id="@+id/nickname_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#3583fb"
+                    android:textSize="20sp"
+                    android:textStyle="bold
+"
+                    tools:text="한글" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님을 위해"
+                    android:textColor="@color/sns_act_color"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/to_alarm_setting"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="right"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/todo_2"
+                    app:elevation="12dp" />
+
+                <ImageButton
+                    android:id="@+id/camera_btn_main"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/camera"
+                    android:visibility="gone"
+                    app:elevation="12dp" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <!-- // 케어 메세지 -->
+            <RelativeLayout
+                android:id="@+id/careMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:letterSpacing="0.06"
+                    android:lineSpacingExtra="5sp"
+                    android:text="오늘의 케어 소식을 준비했어요!"
+                    android:textColor="#121212"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+                    android:layout_width="114dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/button_join"
+                    android:text="필수! 케어체크리스트"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <!-- // Care 노출 부분 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/careMessage"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <!-- 상단 케어 소식 -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_grid_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- 중단 케어소식 -->
+                <RelativeLayout
+                    android:id="@+id/more_care_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/button"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/main_care_image"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/profile" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_toEndOf="@+id/main_care_image"
+                        android:layout_toRightOf="@+id/main_care_image"
+                        android:letterSpacing="0.04"
+                        android:text="더 많은 케어소식 받기"
+                        android:textColor="#262626"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_1" />
+
+                </RelativeLayout>
+
+                <!-- 인기케어 -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <TextView
+                        android:id="@+id/notice_img_sns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:letterSpacing="0.06"
+                        android:lineSpacingExtra="5sp"
+                        android:text="인기케어"
+                        android:textColor="#121212"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/notice_img_sns"
+                        tools:listitem="@layout/card_view_main_item" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/moreCare_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_gray"
+                    android:fontFamily="@font/nanum_square_bold"
+                    android:text="인기케어 더보기"
+                    android:textColor="#262626"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/start"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="21dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:letterSpacing="0.02"
+            android:text="알람 설정"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/custom_dialog_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:letterSpacing="0.02"
+            android:text="완료"
+            android:textColor="#3583fb"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/button_zone_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="44dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 10분 후 -->
+        <Button
+            android:id="@+id/later_10_min"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_gray"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="3sp"
+            android:text="10분"
+            android:textColor="#55262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- 30분 후 -->
+        <Button
+            android:id="@+id/later_30_min"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_gray"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="3sp"
+            android:text="30분"
+            android:textColor="#55262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- 60분 후 -->
+        <Button
+            android:id="@+id/later_60_min"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/round_gray"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="3sp"
+            android:text="1시간"
+            android:textColor="#55262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- 120분 후 -->
+        <Button
+            android:id="@+id/later_120_min"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/round_gray"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="3sp"
+            android:text="2시간"
+            android:textColor="#55262626"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

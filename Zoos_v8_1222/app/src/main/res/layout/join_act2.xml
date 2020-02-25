@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_join2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:padding="20dp"
+    tools:context=".Join_Act">
+
+    <!-- backbutton in join_act -->
+    <ImageView
+        android:id="@+id/backbutton_join2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/text_join2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backbutton_join2"
+        android:layout_marginBottom="41dp"
+        android:letterSpacing="0.06"
+        android:lineSpacingExtra="2sp"
+        android:text="휴대폰번호로 가입(2)"
+        android:textColor="#121212"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_join2"
+        android:orientation="vertical">
+
+        <!-- 전화번호 TEXT-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="Phone number"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- 전화번호 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/cellphone_join2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_phoneNumber"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+        </LinearLayout>
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="@string/join_password"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- Password -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/password_join2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_password"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+        </LinearLayout>
+
+        <!-- ConfirmPassword -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="@string/join_confirmPassword"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- ConfirmPassword -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/passwordConfirm_Join2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_confirmPassword"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+        </LinearLayout>
+
+        <!-- NickName -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="@string/join_nickname"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- NickName -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/nickname_join2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_nickname"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+        </LinearLayout>
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="@string/join_email"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/email_join2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_email"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/next_box_join2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/line1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_join"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/next_txt_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="가입완료"
+            android:textColor="@color/colorJoinBox"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

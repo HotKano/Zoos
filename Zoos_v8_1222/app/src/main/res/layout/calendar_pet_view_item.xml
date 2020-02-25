@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="20dip"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/calendar_pet_view_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="12dip"
+        android:alpha="0.3"
+        android:background="@android:color/transparent"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/calendar_pet_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/nanum_square_bold"
+        android:gravity="center"
+        android:letterSpacing="0.02"
+        android:textColor="#262626"
+        android:textSize="12sp" />
+
+</LinearLayout>

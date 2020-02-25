@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    tools:context="com.chanb.zoos.Story_act">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- 우측 상단 설정 및 공유 메뉴 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/share_save"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toStartOf="@+id/setting_save"
+                    android:layout_toLeftOf="@+id/setting_save"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/share"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/setting_save"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/set_gray" />
+            </RelativeLayout>
+
+            <!-- 중앙 반려동물 프로필 이미지 뷰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/petProfile_story"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/manprivate" />
+
+            </LinearLayout>
+
+            <!-- 펫 이름 -->
+            <TextView
+                android:id="@+id/petName_Story_Act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.04"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="장화신은 고양이" />
+
+            <!-- 펫 소개 -->
+            <TextView
+                android:id="@+id/petContent_Story_Act"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.04"
+                android:textColor="#262626"
+                android:textSize="16sp"
+                tools:text="장화신은 고양이" />
+
+            <!-- 중단 케어소식 -->
+            <RelativeLayout
+                android:id="@+id/more_info_pet_story_view"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/main_care_image"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toEndOf="@+id/main_care_image"
+                    android:layout_toRightOf="@+id/main_care_image"
+                    android:letterSpacing="0.04"
+                    android:text="아이 정보 살펴보기"
+                    android:textColor="#262626"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow_1" />
+
+            </RelativeLayout>
+
+            <!-- 월별 사진 가로 스크롤 리사이클러뷰 띄우는 프레그먼트-->
+            <FrameLayout
+                android:id="@+id/container_story"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/upload_btn_story_act"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/start_with_phone_color"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_camera"
+        android:visibility="visible"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        app:fabSize="auto" />
+
+</android.support.design.widget.CoordinatorLayout>

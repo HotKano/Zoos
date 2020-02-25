@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.chanb.zoos.Setting_act">
+
+    <!-- backbutton in setting_act -->
+    <Button
+        android:id="@+id/backbutton_setting"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/back" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="31dp"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:text="환경설정"
+        android:textColor="#262626"
+        android:textSize="20sp" />
+
+    <!-- 알림 설정 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/alarm_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="알림 설정"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/edit_view_color" />
+
+    <!-- 공지사항 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="공지사항"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!-- FAQ -->
+
+    <!-- 정보 및 약관 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="정보 및 약관"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/edit_view_color" />
+
+    <!-- 비밀번호 변경 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="비밀번호 변경"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!-- 로그아웃 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setting_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="로그아웃"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/edit_view_color" />
+
+    <!-- 피드백 보내기 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="피드백 보내기"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!-- 서비스 탈퇴 -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/delete_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="서비스 탈퇴"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

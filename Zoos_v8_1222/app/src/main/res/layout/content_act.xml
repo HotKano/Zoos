@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_act_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Content_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- 상단 백버튼 공유버튼 좋아요 버튼 및 텍스트 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp">
+
+            <ImageView
+                android:id="@+id/backButton_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:id="@+id/share_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toStartOf="@+id/like_img_content"
+                android:layout_toLeftOf="@+id/like_img_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/share" />
+
+            <ImageView
+                android:id="@+id/like_img_content"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/like_txt_content"
+                android:layout_toLeftOf="@+id/like_txt_content"
+                android:src="@drawable/icon_like_before" />
+
+            <TextView
+                android:id="@+id/like_txt_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:text="0"
+                android:textColor="@color/sns_act_color" />
+        </RelativeLayout>
+
+        <!-- 이미지 뷰 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/content_img_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="5dp"
+            android:scrollbarThumbHorizontal="@drawable/horizontal_scrollbar_color"
+            android:scrollbarTrackHorizontal="@drawable/horizontal_scrollbar_color_background"
+            android:scrollbars="horizontal" />
+
+        <!-- 본문 프로필 아이디 작성 시간 및 방문-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/content_profile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/content_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/content_profile"
+                android:layout_toRightOf="@+id/content_profile"
+                android:letterSpacing="0.04"
+                android:text="뚱땡이맘"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time_view_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.01"
+                android:text="3시간 전 | 조회 18"
+                android:textColor="#262626"
+                android:textSize="10sp" />
+
+
+        </RelativeLayout>
+
+        <!-- 본문 글 내용 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 본문 -->
+            <TextView
+                android:id="@+id/content_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.04"
+                android:lineSpacingExtra="7sp"
+                android:textColor="#262626"
+                android:textSize="14sp" />
+
+            <!-- 태그 -->
+            <TextView
+                android:id="@+id/content_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="2sp"
+                android:text="#양치질 #치석 #3개월"
+                android:textColor="#3583fb"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!-- 댓글 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/content_reply_background"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 댓글 총 갯수 -->
+            <TextView
+                android:id="@+id/total_number_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="댓글 0개"
+                android:textColor="@color/sns_act_color"
+                android:textStyle="bold" />
+
+            <!-- 댓글 표시 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/reviewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#00000000"
+                android:paddingTop="10dp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- 댓글 입력 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/comment_insert_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@android:color/transparent"
+                android:hint="댓글을 입력하세요."
+                android:letterSpacing="0.04"
+                android:padding="10dp"
+                android:textColor="#262626"
+                android:textSize="12sp"
+                android:theme="@style/Theme.Edit.upload" />
+
+            <Button
+                android:id="@+id/comment_uploadBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:text="등록"
+                android:textColor="#3583fb"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

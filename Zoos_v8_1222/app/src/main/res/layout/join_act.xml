@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_join"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:padding="20dp"
+    tools:context=".Join_Act">
+
+    <!-- backbutton in join_act -->
+    <ImageView
+        android:id="@+id/backbutton_join"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/text_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backbutton_join"
+        android:layout_marginBottom="41dp"
+        android:letterSpacing="0.06"
+        android:lineSpacingExtra="2sp"
+        android:text="휴대폰번호로 가입(1)"
+        android:textColor="#121212"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_join"
+        android:orientation="vertical">
+
+        <!-- 전화번호 TEXT-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="Phone number"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- 전화번호 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/cellphone_join"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join_phoneNumber"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+            <Button
+                android:id="@+id/cellphone_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:text="인증하기"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- 인증번호 TEXT-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:text="인증번호"
+            android:textColor="#717171"
+            android:textSize="13sp" />
+
+        <!-- 인증번호 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/sms_join"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/join3"
+                android:inputType="textEmailAddress"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHint="@color/colorJoinHintText"
+                android:theme="@style/Theme.Edit.base" />
+
+
+            <Button
+                android:id="@+id/sms_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/button_join"
+                android:gravity="center"
+                android:text="확인"
+                android:textColor="@color/start"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

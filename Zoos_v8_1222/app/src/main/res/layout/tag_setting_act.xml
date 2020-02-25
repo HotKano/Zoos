@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TagSetting_act">
+
+    <!-- 백 버튼 && 태그 설정 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 백 버튼 -->
+        <ImageButton
+            android:id="@+id/tag_setting_backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <!-- 태그 설정 버튼 -->
+        <TextView
+            android:id="@+id/tag_setting_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:letterSpacing="0.02"
+            android:text="0개 설정"
+            android:textColor="#3583fb"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanum_square_extrabold"
+        android:letterSpacing="0.02"
+        android:text="태그 설정"
+        android:textColor="#262626"
+        android:textSize="20sp" />
+
+    <!-- 검색 창 및 검색 버튼 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/tag_finder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9.8"
+            android:background="@android:color/transparent"
+            android:hint="# 검색어를 입력하세요"
+            android:letterSpacing="0.03"
+            android:lineSpacingExtra="6sp"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/tag_fix_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_weight="0.2"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/search" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/edit_view_color" />
+
+    <TextView
+        android:id="@+id/tag_show_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- 회원님에게 추천하는 태그 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.02"
+        android:text="회원님에게 추천하는 태그"
+        android:textColor="#262626"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MessageShow_Act">
+
+    <RelativeLayout
+        android:id="@+id/message_show_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/backButton_Message_Show"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/profile_message_show"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="10dp" />
+
+            <TextView
+                android:id="@+id/nickname_message_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:letterSpacing="0.04"
+                android:textColor="#202020"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sendZone_Message"
+        android:layout_below="@+id/message_show_info"
+        android:orientation="vertical">
+
+        <!-- 마지막 문자 메시지 도착 날짜 -->
+        <TextView
+            android:id="@+id/date_msg_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:lineSpacingExtra="3sp"
+            android:text=""
+            android:textColor="#62717a"
+            android:textSize="11sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/message_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sendZone_Message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/message_send_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/nanum_square_bold"
+            android:hint="메시지를 입력하세요"
+            android:letterSpacing="0.02"
+            android:textColor="#bfbfbf"
+            android:textSize="12sp"
+            android:theme="@style/Theme.Edit.upload" />
+
+
+        <Button
+            android:id="@+id/sendBtn_Main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="SEND"
+            android:textColor="#3583fb"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
+

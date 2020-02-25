@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- backbutton in save_act -->
+        <Button
+            android:id="@+id/backButton_save"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/back" />
+
+        <!-- 주스저장소 -->
+        <!-- TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/nanum_square_extrabold"
+            android:letterSpacing="0.02"
+            android:text="저장소"
+            android:textColor="#262626"
+            android:textSize="20sp" /> -->
+
+        <!-- 카테고리 정렬 -->
+        <!--LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/all_save"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/button_save"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:text="전체"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/care_save"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/button_save_gray"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:text="케어소식"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/story_save"
+                android:layout_width="61dp"
+                android:layout_height="27dp"
+                android:background="@drawable/button_save_gray"
+                android:fontFamily="@font/nanum_square_bold"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:text="스토리"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textColor="#ffffff"
+                android:textSize="11sp" />
+        </LinearLayout> -->
+
+        <!-- 프레임레이아웃 -->
+        <FrameLayout
+            android:id="@+id/container_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

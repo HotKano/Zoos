@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">알람쥬</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- joinAct -->
+    <string name="join_password"> Password </string>
+    <string name="join_confirmPassword">Confirm Password</string>
+    <string name="join_phoneNumber">핸드폰 번호</string>
+    <string name="join3">인증번호</string>
+    <string name="join4">비밀번호</string>
+    <string name="join_nickname">Nickname</string>
+    <string name="join_email">Email</string>
+
+    <string name="customDialog1"> 사진편집 </string>
+    <string name="customDialog2"> 촬영 </string>
+    <string name="title_activity_fab">Fab</string>
+    <string name="join6">가입 후 우리 아가들 정보 등록이 가능합니다. (닉네임 또한 변경 가능)</string>
+    <string name="upload_text">스토리 작성</string>
+    <string name="profile_text">프로필</string>
+
+    <string name="naver_key">Bfy77HjCHEzc5ZnpNETX</string>
+    <string name="naver_pw">zlyJiqM2gc</string>
+    <string name="activity_title_main">Filters</string>
+    <string name="action_settings">Settings</string>
+    <string name="filters">FILTERS</string>
+    <string name="edit">EDIT</string>
+
+    <!-- loginAct -->
+    <string name="login1">핸드폰 번호</string>
+    <string name="login2">비밀번호</string>
+
+    <!-- 카카오 관련-->
+    <string name="kakao_key">b0ce5bfbb6f6227bbc789d93af1b7e2d</string>
+    <string name="kakao_scheme">kakaob0ce5bfbb6f6227bbc789d93af1b7e2d</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+    <!-- logoAct -->
+    <string name="visit_first">ZOOS에 처음 오셨나요?</string>
+    <string name="visit_first_login">로그인 하기</string>
+    <string name="start_with_phone">휴대폰 번호로 가입</string>
+    <string name="title_activity_save_act">save_act</string>
+
+    <!-- firebase notification -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">NOTIFICATION</string>
+
+</resources>

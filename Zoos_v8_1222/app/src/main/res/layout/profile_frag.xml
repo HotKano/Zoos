@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- 프로필 and MY ZOO -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 프로필 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/nanum_square_extrabold"
+            android:letterSpacing="0.02"
+            android:text="프로필"
+            android:textColor="#262626"
+            android:textSize="20sp" />
+
+        <!-- MY ZOO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_bold"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="5sp"
+            android:text="MY ZOO"
+            android:textColor="#262626"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <!-- 반려 동물 리스트 -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_pet_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:scrollbarSize="5dp"
+        android:scrollbarThumbHorizontal="@drawable/horizontal_scrollbar_color"
+        android:scrollbarTrackHorizontal="@drawable/horizontal_scrollbar_color_background"
+        android:scrollbars="horizontal" />
+
+
+    <!-- 쥬스 저장소 -->
+    <LinearLayout
+        android:id="@+id/info_to_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/paw_2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_bold"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="5sp"
+                android:text="쥬스저장소"
+                android:textColor="#262626"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_regular"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="10sp"
+                android:text="내가 좋아요, 저장한 글을 확인합니다"
+                android:textColor="#55262626"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 구분 선 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/edit_view_color" />
+
+    <!-- 환경 설정 -->
+    <LinearLayout
+        android:id="@+id/info_to_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/set" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanum_square_bold"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="5sp"
+            android:text="환경설정"
+            android:textColor="#262626"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+

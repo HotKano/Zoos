@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    tools:context=".Alarm_Repeat_Act">
+
+    <!-- top backButton layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/backButton_alarm_repeat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+    </RelativeLayout>
+
+    <!-- title -->
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="40dp"
+        android:letterSpacing="0.02"
+        android:text="반복 설정 - 매일"
+        android:textColor="#262626"
+        android:textSize="20sp" />
+
+    <!-- repeat value and days -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="98dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/repeat_value"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:background="@color/upload_button_background"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:inputType="number"
+            android:letterSpacing="0.04"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="1"
+            android:textColor="#262626"
+            android:textSize="17sp"
+            android:theme="@style/Theme.Edit.base_login" />
+
+        <TextView
+            android:id="@+id/intervalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.04"
+            android:text="일마다"
+            android:textColor="#262626"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <!-- 상단 분류 탭 -->
+    <!-- 터치 효과 제거  app:tabRippleColor="@null"-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_repeat_Act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/transparent"
+        android:clipToPadding="false"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        app:elevation="0dp"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#3583fb"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="#3583fb" />
+
+
+    <!-- 프레임레이아웃 -->
+    <FrameLayout
+        android:id="@+id/container_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <Button
+        android:id="@+id/alarm_repeat_submit"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_join"
+        android:textStyle="bold"
+        android:text="1일마다 반복 설정"
+        android:textColor="@color/start"
+        android:textSize="16sp" />
+
+</LinearLayout>

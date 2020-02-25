@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".Upload_act">
+
+    <!-- 상단 backButton 완료 버튼 -->
+    <RelativeLayout
+        android:id="@+id/zone1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- backbutton in upload_act -->
+        <Button
+            android:id="@+id/backbutton_upload"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/back" />
+
+        <Button
+            android:id="@+id/upload_btn_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:gravity="right|center"
+            android:letterSpacing="0.02"
+            android:text="완료"
+            android:textColor="@color/start_with_phone_color"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <!-- 제목 & 본문 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 제목 -->
+        <EditText
+            android:id="@+id/title_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/nanum_square_extrabold"
+            android:gravity="start"
+            android:hint="제목"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="4sp"
+            android:padding="3dp"
+            android:textColor="#262626"
+            android:textSize="18sp"
+            android:theme="@style/Theme.Edit.upload"
+            android:visibility="gone" />
+
+        <!-- 본문 -->
+        <EditText
+            android:id="@+id/edit_upload"
+            android:layout_width="match_parent"
+            android:layout_height="243dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/nanum_square_regular"
+            android:gravity="start"
+            android:hint="내용을 입력하세요"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="8sp"
+            android:maxLength="500"
+            android:padding="3dp"
+            android:textColor="#262626"
+            android:theme="@style/Theme.Edit.upload" />
+
+    </LinearLayout>
+
+    <!-- 사진 추가 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"
+        android:text="이미지&amp;GIF 업로드"
+        android:textColor="#262626"
+        android:textSize="14sp" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/pic_btn_upload"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/round_upload"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:textColor="#c3c3c3" />
+
+                <Button
+                    android:id="@+id/pic_btn_upload_cancel"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/delete_3"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/pic_btn_upload1"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/round_upload"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:textColor="#c3c3c3"
+                    android:textSize="46.7sp" />
+
+                <Button
+                    android:id="@+id/pic_btn_upload_cancel1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/delete_3"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/pic_btn_upload2"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/round_upload"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:textColor="#c3c3c3"
+                    android:textSize="46.7sp" />
+
+                <Button
+                    android:id="@+id/pic_btn_upload_cancel2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/delete_3"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/pic_btn_upload3"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/round_upload"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:textColor="#c3c3c3"
+                    android:textSize="46.7sp" />
+
+                <Button
+                    android:id="@+id/pic_btn_upload_cancel3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/delete_3"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+        <!-- 나만 보기 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:letterSpacing="0.04"
+            android:text="나만 보기(비공개)"
+            android:textColor="#262626"
+            android:textSize="14sp" />
+        <!-- 나만 보기 토글 -->
+        <Switch
+            android:id="@+id/toggle_upload"
+            android:layout_width="48dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track_selector" />
+
+    </RelativeLayout>
+
+
+    <!-- 해시태그 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"
+        android:text="해시태그"
+        android:textColor="#262626"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/tag_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="# 태그를 입력해주세요."
+        android:letterSpacing="0.03"
+        android:lineSpacingExtra="6sp"
+        android:singleLine="true"
+        android:textColor="#262626"
+        android:textSize="14sp"
+        android:theme="@style/Theme.Edit.upload" />
+
+</LinearLayout>

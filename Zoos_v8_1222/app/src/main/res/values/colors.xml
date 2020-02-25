@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="colorJoin">#fcd91b</color>
+    <color name="colorLogo">#ffffff</color>
+    <color name="colorJoinBox">#ece9e4</color>
+    <color name="colorJoinText">#6b6a69</color>
+    <color name="colorJoinHintText">#336b6a69</color>
+    <color name="colorJoinSubmitBtn">#282828</color>
+    <color name="upload_color">#ffd800</color>
+    <color name="start">#ffffff</color>
+    <color name="naver">#00c63b</color>
+    <color name="kakao">#332c2b</color>
+    <color name="nav">#dedede</color>
+    <color name="color_option_menu">#FF3990</color>
+    <color name="filter_label_normal">#8A8889</color>
+    <color name="filter_label_selected">#221F20</color>
+    <color name="start_with_phone_color">#3583fb</color>
+    <color name="editText_Normal_Mode">#ededed</color>
+    <color name="mainActTabColor">#ffffff</color>
+    <color name="btn_gray">#d8d8d8</color>
+    <color name="switch_button">#3583fb</color>
+    <color name="switch_background">#eeeeee</color>
+    <color name="edit_view_color">#f0f0f0</color>
+    <color name="edit_pet_background">#dddddd</color>
+    <color name="upload_button_background">#f1f1f2</color>
+    <color name="calendar_view_color">#eaeaea</color>
+    <color name="calendar_diary_background">#f1f1f2</color>
+    <color name="content_reply_background">#f1f1f2</color>
+    <color name="sns_act_color">#262626</color>
+    <color name="message_reciever">#ffffff</color>
+    <color name="message_send">#000000</color>
+    <color name="tab_on">#2377BD</color>
+</resources>

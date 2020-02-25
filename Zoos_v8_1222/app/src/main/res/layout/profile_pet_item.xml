@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/profile_pet_zone"
+        android:layout_width="180dp"
+        android:layout_height="186dp"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edit_pet_background">
+
+        <!-- 펫 프로필 사진 -->
+        <ImageView
+            android:id="@+id/pet_profile_edit"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/man" />
+
+        <!-- 드래그 앤 드랍 아이템 순서 바꾸는 뷰 -->
+        <ImageView
+            android:id="@+id/pet_edit_petMenu"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu" />
+
+        <!-- 펫 이름, 성별 -->
+        <LinearLayout
+            android:id="@+id/pet_name_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pet_profile_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- 펫 이름 -->
+            <TextView
+                android:id="@+id/pet_edit_petName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/nanum_square_extrabold"
+                android:letterSpacing="0.02"
+                android:text="시바"
+                android:textColor="#262626"
+                android:textSize="16sp" />
+
+            <!-- 펫 성별 -->
+            <ImageView
+                android:id="@+id/pet_edit_petGender"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_below="@+id/pet_profile_edit"
+                android:layout_toRightOf="@+id/pet_edit_petName"
+                android:scaleType="fitCenter" />
+
+        </LinearLayout>
+
+        <!-- 펫 종류, 무게, 나이 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pet_name_gender"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pet_edit_petInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanum_square_bold"
+                android:letterSpacing="0.02"
+                android:text="MIX 소형견 / 5Kg / 9살"
+                android:textColor="#262626"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

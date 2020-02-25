@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Care_Content_Act">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_test_care"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/comment_zone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- 섬네일 노출 뷰 -->
+                    <ImageView
+                        android:id="@+id/webText_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="259dp"
+                        android:scaleType="fitXY" />
+
+                    <ImageButton
+                        android:id="@+id/backBtn_care_content"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="16dp"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/care_cancel" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title_care_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:letterSpacing="0.02"
+                    android:textColor="#262626"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="가오나시의 이빨-치석은 안녕한가요?" />
+
+                <!-- 본문 표시 역할 .6-->
+                <TextView
+                    android:id="@+id/webText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#262626"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- 태그 -->
+            <TextView
+                android:id="@+id/content_tag_care"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="24dp"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="2sp"
+                android:padding="16dp"
+                android:text="#양치질 #치석 #3개월"
+                android:textColor="#3583fb"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- 댓글 영역 .3-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/content_reply_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 댓글 총 갯수 -->
+                <TextView
+                    android:id="@+id/total_number_content_care"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="댓글 0개"
+                    android:textColor="@color/sns_act_color"
+                    android:textStyle="bold" />
+
+                <!-- 댓글 표시 -->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/comment_reply_care"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#00000000"
+                    android:paddingTop="10dp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <!-- 댓글 입력 영역 1-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/start"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/comment_insert_content_care"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent"
+                    android:hint="댓글을 입력하세요."
+                    android:letterSpacing="0.04"
+                    android:padding="10dp"
+                    android:textColor="#262626"
+                    android:textSize="12sp"
+                    android:theme="@style/Theme.Edit.upload" />
+
+                <Button
+                    android:id="@+id/comment_uploadBtn_care"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/nanum_square_bold"
+                    android:gravity="center"
+                    android:letterSpacing="0.04"
+                    android:text="등록"
+                    android:textColor="#3583fb"
+                    android:textSize="13sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- // 하단 네비게이션 바 1-->
+    <!-- 터치 효과 제거  app:tabRippleColor="@null"-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_content_care"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        app:tabBackground="@android:color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#00000000"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="#000000"
+        app:tabTextColor="#ffffff" />
+
+</android.support.design.widget.CoordinatorLayout>

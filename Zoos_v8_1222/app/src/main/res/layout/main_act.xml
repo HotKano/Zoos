@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_act"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/start"
+    tools:context=".Main_act">
+
+    <!-- 프레임레이아웃 -->
+    <FrameLayout
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs" />
+
+    <!-- // 하단 네비게이션 바 -->
+    <!-- 터치 효과 제거  app:tabRippleColor="@null"-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        app:tabBackground="@android:color/transparent"
+        app:tabGravity="fill"
+        android:foregroundGravity="center"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorGravity="center"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@android:color/transparent"
+        app:tabTextColor="#ffffff" />
+
+</RelativeLayout>
+
+
+
+
+
+

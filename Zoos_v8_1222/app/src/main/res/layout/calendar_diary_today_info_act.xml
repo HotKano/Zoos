@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:orientation="vertical"
+    tools:context=".CalendarDiaryDayInfo_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 백 버튼 && 등록 버튼 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageButton
+                android:id="@+id/backButton_calendar_TodayInfo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+            <ImageButton
+                android:id="@+id/diary_frag_btn_today"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/share"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0.02"
+            android:text="오늘의 케어 소식"
+            android:textColor="#262626"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/upload_button_background"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/date_Today_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:letterSpacing="0.02"
+                android:text="2018.11.24 (금)"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/later_calling_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@android:color/transparent"
+                android:letterSpacing="0.02"
+                android:textColor="#3583fb"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="잠시후 다시 알려주세요" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- 일정 표시 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_diary_Today_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/emptyText_today"
+                android:layout_width="wrap_content"
+                android:layout_height="182dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:letterSpacing="0.03"
+                android:textColor="#393939"
+                android:textSize="14sp"
+                android:visibility="visible"
+                tools:text="일정이 없습니다. \n 필수체크케어리스트 또는 추천케어를 참고하여 반려동물에게 케어를 선물해주세요" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@color/upload_button_background"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="추천케어"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- 추천 리스트 -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_diary_Today_care"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" />
+
+        <!-- 하단 케어소식 -->
+        <RelativeLayout
+            android:id="@+id/more_care_layout_today"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/main_care_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toEndOf="@+id/main_care_image"
+                android:layout_toRightOf="@+id/main_care_image"
+                android:letterSpacing="0.04"
+                android:text="더 많은 케어소식 받기"
+                android:textColor="#262626"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/arrow_1" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

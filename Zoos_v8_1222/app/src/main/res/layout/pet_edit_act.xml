@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    tools:context="com.chanb.zoos.Pet_edit_act">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- backButton -->
+        <ImageButton
+            android:id="@+id/backButton_edit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="2dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back" />
+
+        <!-- 펫 프로필 사진 -->
+        <ImageView
+            android:id="@+id/edit_petProfile"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center" />
+
+        <!-- 이름 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:letterSpacing="0.04"
+            android:text="이름"
+            android:textColor="#202020"
+            android:textSize="12sp" />
+
+        <!-- 이름 Edit -->
+        <EditText
+            android:id="@+id/edit_petName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/edit_pet_background"
+            android:gravity="start"
+            android:hint="이름을 입력하세요."
+            android:inputType="text"
+            android:padding="3dp"
+            android:singleLine="true"
+            android:theme="@style/Theme.Edit.upload" />
+
+        <!-- 본문 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:letterSpacing="0.04"
+            android:text="아이소개"
+            android:textColor="#202020"
+            android:textSize="12sp" />
+
+        <!-- 본문 Edit -->
+        <EditText
+            android:id="@+id/edit_petContent"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginBottom="43dp"
+            android:background="@drawable/edit_pet_background"
+            android:gravity="start"
+            android:hint="아이 소개를 입력해주세요."
+            android:inputType="text"
+            android:padding="3dp"
+            android:singleLine="false"
+            android:theme="@style/Theme.Edit.upload" />
+
+        <!-- 필수정보 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.04"
+            android:text="필수정보"
+            android:textColor="#262626"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- 펫의 종류 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="동물 종류"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pet_Race_kind_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="선택하기"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/edit_view_color" />
+
+        <!-- 종 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="종"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petKindView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="선택하기"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/edit_view_color" />
+
+        <!-- 나이 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="나이"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petAgeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="입력해주세요"
+                android:textColor="#55202020"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/edit_view_color" />
+
+        <!-- 성별 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="성별"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petGenderView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="선택하기"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/edit_view_color" />
+
+        <!-- 중성화 여부 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="중성화 여부"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petNeutralView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="선택하기"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/edit_view_color" />
+
+        <!-- 현재 무게 -->
+
+        <!-- 동물등록번호 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:letterSpacing="0.04"
+                android:text="동물등록번호"
+                android:textColor="#262626"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petNumberView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toStartOf="@+id/petNumberNoneView"
+                android:layout_toLeftOf="@+id/petNumberNoneView"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="있음"
+                android:textColor="#3583fb"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/petNumberNoneView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end"
+                android:letterSpacing="0.04"
+                android:text="없음"
+                android:textColor="#262626"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/petEdit_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_join"
+            android:gravity="center"
+            android:text="완료"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</ScrollView>

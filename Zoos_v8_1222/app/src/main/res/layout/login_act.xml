@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/start"
+    android:gravity="center_horizontal"
+    tools:context=".Login_act">
+
+    <!-- backbutton in login_act-->
+    <ImageView
+        android:id="@+id/backbutton_login"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/back" />
+
+    <!-- 상단 로그인 탭 -->
+    <RelativeLayout
+        android:id="@+id/logo_login_zone"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backbutton_login"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/logo_login"
+            android:layout_width="144dp"
+            android:layout_height="33dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="21dp"
+            android:letterSpacing="0.06"
+            android:lineSpacingExtra="2sp"
+            android:text="로그인"
+            android:textColor="#121212"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/login_zone"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_login"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_pw_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:text="Phone number"
+                    android:textColor="#77262626"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/id_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login1"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorJoinHintText"
+                    android:theme="@style/Theme.Edit.base_login" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:text="Password"
+                    android:textColor="#77262626"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/pw_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/login2"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="@color/colorJoinHintText"
+                    android:theme="@style/Theme.Edit.base_login" />
+
+                <Button
+                    android:id="@+id/loginBtn_login"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="328dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/button_join"
+                    android:text="로그인"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="328dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="180dp"
+                        android:layout_marginRight="180dp"
+                        android:gravity="end"
+                        android:text="비밀번호 찾기"
+                        android:textColor="#121212"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/join_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="회원가입하기"
+                        android:textColor="@color/start_with_phone_color"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sns_login_login"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1.2"
+                    android:background="#ffffff" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SNS로 로그인하기"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1.2"
+                    android:background="#ffffff" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 하단 sns 로그인 탭 -->
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/kakao_btn"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+            android:id="@+id/buttonNaverLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/naver_btn"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
