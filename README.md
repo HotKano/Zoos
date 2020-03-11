@@ -15,5 +15,6 @@ dpsw23@naver.com
 -	PHP, JSON 구문 분석, MySQL, DB 설계 및 활용
 -	FCM를 이용한 실시간 메시지 구현
 -	Google-Play 업로드
+
 업무실적: 1인 개발로 외주개발 진행완료
 퇴직사유: 외주개발 종료
